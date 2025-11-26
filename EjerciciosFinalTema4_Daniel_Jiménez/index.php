@@ -1,4 +1,6 @@
 <?php
+
+//Ejercicio 1
 class Vehiculo{
     public $marca;
     public $modelo;
@@ -14,6 +16,7 @@ class Vehiculo{
     }
 }
 
+//Ejercicio 2
 class Coche extends Vehiculo{
     public function __construct(
         string $marca,
@@ -28,6 +31,7 @@ class Coche extends Vehiculo{
     }
 }
 
+//Ejercicio 3
 class CuentaBancaria{
     private $saldo;
 
@@ -50,6 +54,8 @@ class CuentaBancaria{
         return $this->saldo;
     }
 }
+
+//Ejercicio 4
 class empleado{
     public $nombre{
         get => strtoupper ($this->nombre);
@@ -66,6 +72,8 @@ class empleado{
         return $this->salario * 12;
     }
 }
+
+//Ejercicio 5
 interface Calculable{
     public function calcularArea();
     public function calcularPerimetro();
@@ -89,6 +97,49 @@ class Circulo implements Calculable{
         return 2 * pi() * $this->radio;
     }
 }
+
+//Ejercicio 6
+abstract class Figura{
+    protected $color;
+
+    abstract public function calcularArea();
+    public function obtenerColor(){
+        return $this->color;
+    }
+}
+class Triangulo extends Figura{
+    public function __construct(
+        $color,
+        $altura,
+        $base
+    )
+    {
+        parent::__construct($color);
+    }
+
+    public function calcularArea()
+    {
+        return ($this->base * $this->altura) / 2;
+    }
+}
+
+class Cuadrado extends Figura {
+    public function __construct(
+        $color,
+        $lado
+    )
+    {
+        parent::__construct($color);
+    }
+    public function calcularArea()
+    {
+        return pow($this->lado, 2);
+    }
+}
+
+//Ejercicio 7
+
+
 
 
 
