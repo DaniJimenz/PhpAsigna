@@ -90,17 +90,6 @@ class Circulo implements Calculable{
     }
 }
 
-class Persona{
-    public $nombre;
-    public $edad;
 
-    public function __construct(string $nombre, int $edad){
-        $this->nombre = $nombre;
-        $this->edad = $edad;
-    }
-    public function esMayorDeEdad(){
-        return $this->edad >= 18;
-    }
-}
 
 ?>
